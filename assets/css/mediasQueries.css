@@ -83,6 +83,12 @@
         transition: all 500ms;
         color: rgb(243, 243, 69);
       }
+
+      .div12 { display: none !important; }
+      .div13 {  display: none !important;}
+
+
+
 }
 @media (max-width: 600px){
     .headerSection {
