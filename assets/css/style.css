@@ -9,6 +9,7 @@
 body,html{
     font-family: 'Roboto Condensed', sans-serif;
     scroll-behavior: smooth;
+    min-width: 360px;
 }
 :root{
     --fontSizeMedium: clamp(0.75rem, 0.6346rem + 0.5128vw, 1.25rem);
