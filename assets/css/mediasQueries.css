@@ -1,3 +1,9 @@
+@media (min-width: 1730px){
+  .imgContainer img {
+ height: clamp(42.5rem, -15.3027rem + 53.4591vw, 53.125rem);;
+    }
+}
+
 @media (max-width: 1120px){
     .headerSection{
         justify-content: space-between;
@@ -47,9 +53,6 @@
   color:rgb(236, 206, 32) ; 
  }
 
-
-
-
     .loggin-register{
         display: none;
     }
@@ -88,7 +91,12 @@
       .div13 {  display: none !important;}
 
 
-
+      .womanManContainer{
+        flex-wrap: wrap;
+      }
+      .womanClothing{
+        width: 100%;
+      }
 }
 @media (max-width: 600px){
     .headerSection {
