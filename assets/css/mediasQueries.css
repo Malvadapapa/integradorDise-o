@@ -1,6 +1,6 @@
 @media (min-width: 1730px){
   .imgContainer img {
- height: clamp(42.5rem, -15.3027rem + 53.4591vw, 53.125rem);;
+ height:clamp(42.5rem, 0.8133rem + 38.5542vw, 62.5rem);
     }
 }
 
