@@ -1,100 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/mediasQueries.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@500&display=swap" rel="stylesheet">
-</head>
-<body>
-<section class="discountSection">
-    <div class="discountContainer">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PurpleSky Tienda</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/mediasQueries.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/htmlicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/htmlicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/htmlicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/htmlicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/htmlicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="apple-mobile-web-app-title" content="PurpleSky Tienda" />
+    <meta name="application-name" content="PurpleSky Tienda" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <section class="discountSection">
+      <div class="discountContainer">
+        <p>¡ENVIOS A TODO EL PAIS!</p>
+        <p>¡ENVIO EXPRESS GRATIS A PARTIR DE LOS $20.000!</p>
+        <p>¡HASTA 3 CUOTAS SIN INTERES!</p>
+        <p>¡ENVIO GRATIS A PARTIR DE $10.000!</p>
+      </div>
+    </section>
+    <header class="headerSection">
+      <a href="index.html">
+        <img src="assets/headerAssets/logoHeader.svg" alt=""
+      /></a>
 
-        <p>¡ENVIOS A TODO EL PAIS!</p>  
-        <P>¡ENVIO EXPRESS GRATIS A PARTIR DE LOS $20.000!</P>
-        <P>¡HASTA 3 CUOTAS SIN INTERES!</P>
-        <P>¡ENVIO GRATIS A PARTIR DE $10.000!</P>
+      <input type="checkbox" id="burgerMenu" />
+      <nav class="navContainer">
+        <label for="burgerMenu">
+          <img
+            src="assets/headerAssets/exitBurger.svg"
+            alt=""
+            id="exitBurger"
+          />
+        </label>
 
-    </div>
+        <ul>
+          <li><a href="#mclothing">HOMBRE</a></li>
+          <li><a href="#wclothing">MUJER</a></li>
+          <li><a href="#">ACCESORIOS</a></li>
+          <li><a href="#">SKATEBOARDING</a></li>
+          <li><a href="#">CALZADOS</a></li>
+          <li><a href="#" id="hotSale">¡ HOTSALE !</a></li>
+        </ul>
+      </nav>
+      <div class="headerSection--loggin-register">
+        <nav class="burger--loggin-register">
+          <ul>
+            <li><a href="#">INICIAR SESION!</a></li>
+            <li><a href="#">¡REGISTRARSE!</a></li>
+          </ul>
+          <label for="burgerMenu">
+            <img src="assets/headerAssets/burgerMenu.svg" alt="" />
+          </label>
+        </nav>
 
+        <div
+          data-tooltip="¡INICIAR SESION!"
+          data-flow="bottom"
+          class="loggin-register"
+        >
+          <img src="assets/headerAssets/logginIcon.svg" alt="" />
+        </div>
 
-</section>
-<header class="headerSection">
-    <a href="index.html"> <img src="assets/headerAssets/logoHeader.svg" alt=""></a>
-  
-     
+        <div
+          data-tooltip="No estas registrado? ¡Registrate!"
+          data-flow="bottom"
+          class="loggin-register"
+        >
+          <img src="assets/headerAssets/registerIcon.svg" alt="" />
+        </div>
+      </div>
+    </header>
 
-  <input type="checkbox" id="burgerMenu" />   
- <nav class="navContainer">
-    <label for="burgerMenu">
-        <img src="assets/headerAssets/exitBurger.svg" alt="" id="exitBurger">
-    </label>
+    <!-- PRIMER IMG DEL SLIDER -->
+    <section class="heroSliderSection">
+      <div class="imgContainer">
+        <img src="assets/heroAssets/hero1.png" alt="" />
+        <img src="assets/heroAssets/hero2.png" alt="" />
+        <img src="assets/heroAssets/hero3.png" alt="" />
+        <img src="assets/heroAssets/hero4.png" alt="" />
+        <img src="assets/heroAssets/hero5.png" alt="" />
+      </div>
+    </section>
 
-<ul>
-    <li><a href="#">HOMBRE</a></li>
-    <li><a href="#">MUJER</a></li>
-    <li><a href="#">ACCESORIOS</a></li>
-    <li><a href="#">SKATEBOARDING</a></li>
-    <li><a href="#">CALZADOS</a></li>
-    <li > <a href="#" id="hotSale">¡ HOTSALE !</a></li>
-</ul>
- </nav> 
- <div class="headerSection--loggin-register">
-<nav class="burger--loggin-register">
-<ul>
-    <li><a href="#">INICIAR SESION!</a></li>
-    <li><a href="#">¡REGISTRARSE!</a></li>
-    
-</ul>
-<label for="burgerMenu">
-    <img src="assets/headerAssets/burgerMenu.svg" alt="">
-</label>
-</nav>
+    <section class="clothingSection">
 
-<div data-tooltip="¡INICIAR SESION!" data-flow="bottom" class="loggin-register">
-<img src="assets/headerAssets/logginIcon.svg" alt=""  >
-</div>
-
-<div data-tooltip="No estas registrado? ¡Registrate!" data-flow="bottom" class="loggin-register">
- <img src="assets/headerAssets/registerIcon.svg" alt="" >
-</div>
-</div>
-
-</header>
-
-<!-- PRIMER IMG DEL SLIDER -->
- <section class="heroSliderSection">
-    <div class="imgContainer">
-<img src="assets/heroAssets/hero1.png" alt="">
-<img src="assets/heroAssets/hero2.png" alt="">
-<img src="assets/heroAssets/hero3.png" alt="">
-<img src="assets/heroAssets/hero4.png" alt="">
-<img src="assets/heroAssets/hero5.png" alt="">
-    </div>
- </section>
-
-<section class="clothingSection">
-<div class="womanManContainer">
-
-<div class="womanClothing">
-    <h2>WOMAN CLOTHING</h2>
-    <img src="assets/indexClothing/woman.jpg" alt="">
-</div>
-
-<div class="womanClothing menClothing">
-    <h2>MAN CLOTHING</h2>
-    <img src="assets/indexClothing/men.jpg" alt="">
-</div>
-
-
-</div>
-
-</section>
-
-
-</body>
+      <div class="womanManContainer" >
+<a href="#">
+        <div class="womanClothing" id="wclothing">
+          <h2>WOMAN CLOTHING</h2>
+          <img src="assets/indexClothing/woman.jpg" alt=""  />
+        </div>
+</a>
+<a href="/public/clothingman.html">
+        <div class="womanClothing menClothing" id="mclothing">
+           <h2>MAN CLOTHING</h2>
+           <img src="assets/indexClothing/men.jpg" alt="" />
+        </div>
+</a>
+      </div>
+    </section>
+  </body>
 </html>
