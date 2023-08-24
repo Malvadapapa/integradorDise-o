@@ -1,27 +1,247 @@
-body,html{
-    font-family: 'Roboto Condensed', sans-serif;
-    scroll-behavior: smooth;
-    min-width: 360px;
-    background-image: url(/assets/background/lines.svg);
-    background-size: cover;
+body,
+html {
+  font-family: "Roboto Condensed", sans-serif;
+  scroll-behavior: smooth;
+  min-width: 360px;
+/*   background-image: url(/assets/background/lines.svg);
+  background-size: cover;
+  background-attachment: fixed; */
+}
+a:visited{
+  color: black;
+}
+.mainSection {
+  display: flex;
+}
+.assideSection {
+  display: flex;
+}
+.toggleAsside {
+  display: flex;
+  text-align: center;
+  position: sticky;
+  top: 60px;
+  height: 140px;
+  cursor: pointer;
+  user-select: none;
+  justify-content: center;
+  background-color: brown;
+  width: 40px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.toggleAsside h2 {
+  color: var(--whiteColor);
+  font-size: 15px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-align: center;
+}
+.dropdownMenu {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  height: 90vh;
+  width: 0px;
+  align-items: center;
+  position: sticky;
+  top: 60px;
+  transition: 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+  text-align: center;
+  font-size: 20px;
+}
+.dropdownMenu::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+.dropdownMenu::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
 }
 
-.assideSection{
-    display: flex;
-    flex-direction: column;
-    background-color: aqua;
-    height: 100vh;
-    width: 300px;
-    align-items: center;
+.dropdownMenu::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0); /* color of the scroll thumb */
+  border-radius: 5px; /* roundness of the scroll thumb */
 }
-.toggleAsside{
-display: flex;
-    text-align: center;
+
+#assideMenu {
+  display: none;
+}
+#assideMenu:checked + .dropdownMenu {
+  width: 120%;
+  min-width: 200px;
+  transition: 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+.dropdownMenu > ul {
+  width: 100%;
+}
+
+.dropdownMenu-Selectors {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.11);
+  cursor: pointer;
+}
+
+.dropdownMenu-options {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  
+}
+.showDropDownOptions{
+ cursor: pointer; 
+   width: 100%;
+   display: flex;
+gap: 15px;
+justify-content: center;
+align-items: center;
+
+}
+
+.showDropDownOptions span {
+padding: 2px 0;
  
 }
-.toggleAsside h2{
-    color: var(--whiteColor);
-    background-color: red !important;
-    border: 1px solid red;
-    width: 150px;
+.interior {
+  margin: 10px 0;
+  overflow: hidden;
+  height: auto;
+  transition: 0.1s height cubic-bezier(0.85, 0, 0.15, 1);
+  height: 0;
+}
+.dropdownMenu-options input {
+  accent-color: var(--purpleColor);
+  transform: scale(1.2);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.dropdownMenu-Selectors__priceRange input {
+  border-radius: 5px;
+  outline: none;
+  width: 40%;
+  height: 1.3rem;
+  font-size: 15px;
+  border: 1px solid;
+  background-color: transparent;
+  text-align: center;
+}
+.dropdownMenu-Selectors__priceRange__button {
+  width: 90%;
+  border-radius: 5px;
+  background-color: transparent;
+  margin: 10px 0;
+  box-shadow: none;
+}
+#showDropDownOptions-estilo,
+#showDropDownOptions-talle,
+#showDropDownOptions-color,
+#showDropDownOptions-prenda {
+  display: none;
+}
+#showDropDownOptions-estilo:checked + .interior {
+  height: auto;
+  transition: 0.1s (0.85, 0, 0.15, 1);
+}
+
+#showDropDownOptions-talle:checked + .interior {
+  height: auto;
+  transition: 0.1s (0.85, 0, 0.15, 1);
+}
+
+#showDropDownOptions-color:checked + .interior {
+  height: auto;
+  transition: 0.1s (0.85, 0, 0.15, 1);
+}
+
+#showDropDownOptions-prenda:checked + .interior {
+  height: auto;
+  transition: 0.1s (0.85, 0, 0.15, 1);
+}
+
+.cardsSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 30px;
+ 
+}
+.clothingCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 280px;
+ overflow: hidden;
+ cursor: pointer;
+ 
+ 
+ transition: all 50ms ease;
+ border-radius: 10px;
+ 
+box-shadow:  25px 25px 50px #bcbcbc,
+             -25px -25px 50px #ffffff;
+}
+.clothingCards:hover{
+  background-color: rgb(226, 226, 219);
+  border: 2px solid black;
+  transition: all 50ms ease;
+}
+.clothingCards img{
+  width: 100%;
+}
+.clothingCards_div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid black;
+  padding: 15px 5px;
+}
+.clothingCards_div p:first-child{
+  font-weight: bolder;
+
+}
+.clothingCards_div p:nth-child(2){
+font-size: 1.3em;
+}
+.clothingCards_div p:nth-child(3){
+  color: red;
+  font-weight: bold;
+}
+
+.clothingCards_div span{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.clothingCards__button {
+  position: relative;
+  display: inline-block;
+ 
+  padding: 5px 5px;
+  text-align: center;
+  font-size: 15px;
+ margin: 5px 0;
+  color: black;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 0 black;
+}
+
+.clothingCards__button:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 black;
+}
+
+.clothingCards__button:active {
+  transform: scale(0.9);
 }

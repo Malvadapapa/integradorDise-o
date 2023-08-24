@@ -11,7 +11,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
   min-width: 360px;
-  background-image: url(/assets/background/lines.svg);
+/*   background-image: url(/assets/background/lines.svg); */
 }
 :root {
   --fontSizeMedium: clamp(0.75rem, 0.6346rem + 0.5128vw, 1.25rem);
@@ -76,7 +76,7 @@ html {
 
 /*COMIENZO DEL HEADER*/
 .headerSection {
-  background-color: var(--purpleColor);
+  background-color:var(--blackColor);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -84,29 +84,16 @@ html {
   position: sticky;
   top: 0px;
   z-index: 15;
-  animation: adjust-header ease both;
-  animation-timeline: scroll();
-  animation-range: 0 10px;
+  height: 60px;
 }
 
-@keyframes adjust-header {
-  to {
-    height: 60px;
-    background-color: var(--blackColor);
-  }
-}
+ 
 
 .headerSection img {
-  height: 100px;
-  animation: adjust-header-img ease-in-out both;
-  animation-timeline: scroll();
-  animation-range: 0 10px;
+  height: 70px;
+ 
 }
-@keyframes adjust-header-img {
-  to {
-    height: 70px;
-  }
-}
+ 
 
 .navContainer ul {
   display: flex;
@@ -262,10 +249,8 @@ html {
 /*COMEIZO DEL HERO SECTION*/
 .heroSliderSection {
   width: 100%;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  height: auto;
+  overflow-x:hidden ;
+ 
 }
 .imgContainer {
   display: flex;
@@ -273,7 +258,7 @@ html {
   width: 500%;
 }
 .imgContainer img {
-  width: 100%;
+  width: 100vw;
   animation: slide 30s infinite alternate cubic-bezier(0.85, 0, 0.15, 1);
 }
 

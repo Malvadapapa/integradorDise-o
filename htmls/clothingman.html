@@ -1,92 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/clothingman.css">
-    <link rel="stylesheet" href="assets/css/mediasQueries.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/mediasQueries.css" />
+  <link rel="stylesheet" href="/assets/css/clothingman.css" />
+  <link rel="stylesheet" href="assets/css/mediasQueries.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@500&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    
-    <section class="discountSection">
-      <div class="discountContainer">
-        <p>¡ENVIOS A TODO EL PAIS!</p>
-        <p>¡ENVIO EXPRESS GRATIS A PARTIR DE LOS $20.000!</p>
-        <p>¡HASTA 3 CUOTAS SIN INTERES!</p>
-        <p>¡ENVIO GRATIS A PARTIR DE $10.000!</p>
-      </div>
-    </section>
-    <header class="headerSection">
-      <a href="index.html">
-        <img src="/assets/headerAssets/logoHeader.svg" alt=""
-      /></a>
+  <section class="discountSection">
+    <div class="discountContainer">
+      <p>¡ENVIOS A TODO EL PAIS!</p>
+      <p>¡ENVIO EXPRESS GRATIS A PARTIR DE LOS $20.000!</p>
+      <p>¡HASTA 3 CUOTAS SIN INTERES!</p>
+      <p>¡ENVIO GRATIS A PARTIR DE $10.000!</p>
+    </div>
+  </section>
+  <header class="headerSection">
+    <a href="index.html">
+      <img src="/assets/headerAssets/logoHeader.svg" alt="" /></a>
 
-      <input type="checkbox" id="burgerMenu" />
-      <nav class="navContainer">
-        <label for="burgerMenu">
-          <img
-            src="/assets/headerAssets/exitBurger.svg"
-            alt=""
-            id="exitBurger"
-          />
-        </label>
+    <input type="checkbox" id="burgerMenu" />
+    <nav class="navContainer">
+      <label for="burgerMenu">
+        <img src="/assets/headerAssets/exitBurger.svg" alt="" id="exitBurger" />
+      </label>
 
+      <ul>
+        <li><a href="/index.html">VOLVER AL INICIO </a></li>
+        <li><a href="#">MUJER</a></li>
+        <li><a href="#">ACCESORIOS</a></li>
+        <li><a href="#">SKATEBOARDING</a></li>
+        <li><a href="#">CALZADOS</a></li>
+        <li><a href="#" id="hotSale">¡ HOTSALE !</a></li>
+      </ul>
+    </nav>
+    <div class="headerSection--loggin-register">
+      <nav class="burger--loggin-register">
         <ul>
-          <li><a href="/index.html">VOLVER AL INICIO </a></li>
-          <li><a href="#">MUJER</a></li>
-          <li><a href="#">ACCESORIOS</a></li>
-          <li><a href="#">SKATEBOARDING</a></li>
-          <li><a href="#">CALZADOS</a></li>
-          <li><a href="#" id="hotSale">¡ HOTSALE !</a></li>
+          <li><a href="#">INICIAR SESION!</a></li>
+          <li><a href="#">¡REGISTRARSE!</a></li>
         </ul>
+        <label for="burgerMenu">
+          <img src="/assets/headerAssets/burgerMenu.svg" alt="" />
+        </label>
       </nav>
-      <div class="headerSection--loggin-register">
-        <nav class="burger--loggin-register">
-          <ul>
-            <li><a href="#">INICIAR SESION!</a></li>
-            <li><a href="#">¡REGISTRARSE!</a></li>
+
+      <div data-tooltip="¡INICIAR SESION!" data-flow="bottom" class="loggin-register">
+        <img src="/assets/headerAssets/logginIcon.svg" alt="" />
+      </div>
+
+      <div data-tooltip="No estas registrado? ¡Registrate!" data-flow="bottom" class="loggin-register">
+        <img src="/assets/headerAssets/registerIcon.svg" alt="" />
+      </div>
+    </div>
+  </header>
+  <main class="mainSection">
+    <aside class="assideSection">
+      <input type="checkbox" name="" id="assideMenu"/>
+      <div class="dropdownMenu">
+        <ul>
+          <li class="dropdownMenu-Selectors">
+            <p>PRECIO</p>
+          </li>
+          <p>Ingrese rango de precio</p>
+          <span class="dropdownMenu-Selectors__priceRange">
+            <input type="number" name="" id="" placeholder="Minimo" min="1" max="1000000"> -
+            <input type="number" name="" id="" placeholder="Maximo" min="1" max="1000000"></span>
+          <button class="dropdownMenu-Selectors__priceRange__button">Filtrar</button>
+          <li class="dropdownMenu-Selectors">
+            <label for="showDropDownOptions-estilo" class="showDropDownOptions"><span>ESTILO</span> <i class="fa fa-arrow-circle-down" aria-hidden="true"></i> </label>
+
+          </li>
+          <input type="checkbox" id="showDropDownOptions-estilo">
+          <ul class="interior">
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="PURPLESKY" />
+              <label for="PURPLESKY">PURPLESKY</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="COOLHAAS" />
+              <label for="COOLHAAS">COOLHAAS</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="DC" /> <label for="DC">DC</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="QUIKSILVER" />
+              <label for="QUIKSILVER">QUIKSILVER</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="RUSTY" />
+              <label for="RUSTY">RUSTY</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="VANS" /> <label for="VANS">VANS</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="BURTON" />
+              <label for="BURTON">BURTON</label>
           </ul>
-          <label for="burgerMenu">
-            <img src="/assets/headerAssets/burgerMenu.svg" alt="" />
-          </label>
-        </nav>
+          </li>
 
-        <div
-          data-tooltip="¡INICIAR SESION!"
-          data-flow="bottom"
-          class="loggin-register"
-        >
-          <img src="/assets/headerAssets/logginIcon.svg" alt="" />
-        </div>
+          <li class="dropdownMenu-Selectors">
+            <label for="showDropDownOptions-talle" class="showDropDownOptions"><span>TALLE</span> <i class="fa fa-arrow-circle-down" aria-hidden="true"></i> </label>
 
-        <div
-          data-tooltip="No estas registrado? ¡Registrate!"
-          data-flow="bottom"
-          class="loggin-register"
-        >
-          <img src="/assets/headerAssets/registerIcon.svg" alt="" />
+
+          </li>
+          <input type="checkbox" id="showDropDownOptions-talle">
+          <ul class="interior">
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="XS" />
+              <label for="XS">XS</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="S" />
+              <label for="S">S</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="M" /> <label for="M">M</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="L" />
+              <label for="L">L</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="XL" />
+              <label for="XL">XL</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="XXL" />
+              <label for="XXL">XXL</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="XXXL" /> <label for="XXXL">XXXL</label>
+            </li>
+
+          </ul>
+          <li class="dropdownMenu-Selectors">
+            <label for="showDropDownOptions-color" class="showDropDownOptions"><span>COLOR</span> <i class="fa fa-arrow-circle-down" aria-hidden="true"></i> </label>
+
+
+          </li>
+          <input type="checkbox" id="showDropDownOptions-color">
+          <ul class="interior">
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="NEGRO" />
+              <label for="NEGRO">NEGRO</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="PURPURA" />
+              <label for="PURPURA">PURPURA</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="AZUL" /> <label for="AZUL">AZUL</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="LADRILLO" />
+              <label for="LADRILLO">LADRILLO</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="GRIS" />
+              <label for="GRIS">GRIS</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="BLANCO" />
+              <label for="BLANCO">BLANCO</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="NATURAL" /> <label for="NATURAL">NATURAL</label>
+            </li>
+
+          </ul>
+
+          <li class="dropdownMenu-Selectors">
+            <label for="showDropDownOptions-prenda" class="showDropDownOptions"><span>TIPO DE PRENDA</span> <i class="fa fa-arrow-circle-down" aria-hidden="true"></i> </label>
+
+
+          </li>
+          <input type="checkbox" id="showDropDownOptions-prenda">
+          <ul class="interior">
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="REMERAS" />
+              <label for="REMERAS">REMERAS</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="JEANS" />
+              <label for="JEANS">JEANS</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="SHORTS" /> <label for="SHORTS">SHORTS</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="PANTALONES" />
+              <label for="PANTALONES">PANTALONES</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="BERMUDAS" />
+              <label for="BERMUDAS">BERMUDAS</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="ABRIGO" />
+              <label for="ABRIGO">ABRIGO</label>
+            </li>
+            <li class="dropdownMenu-options">
+              <input type="checkbox" id="CAMISAS" /> <label for="CAMISAS">CAMISAS</label>
+            </li>
+
+          </ul>
+        </ul>
+      </div>
+      <label for="assideMenu" class="toggleAsside">
+        <h2 class="">FILTROS</h2>
+      </label>
+    </aside>
+    <section class="cardsSection">
+
+      <div class="clothingCards">
+        <img src="/assets/clothes/man/1.jpg" alt="">
+        <div class="clothingCards_div">
+          <p>REM MC DC SQUARE </p>
+          <p>$12.900,00</p>
+          <p>3 cuotas sin interés de $4300,00</p>
+          <span>
+            <button class="clothingCards__button">AGREGAR AL CARRITO</button>  
+            <button class="clothingCards__button">COMPRAR</button>
+          </span>
+     
         </div>
       </div>
-    </header>
 
-<aside class="assideSection">
+      <div class="clothingCards"> 
+        <img src="/assets/clothes/man/2.jpg" alt="">
+        <div class="clothingCards_div">
+          <p>REM MC DC 1994</p>
+          <p>$15.300,00</p>
+          <p>3 cuotas sin interés de $5100,00</p>
+          <span>
+            <button class="clothingCards__button">AGREGAR AL CARRITO</button>  
+            <button class="clothingCards__button">COMPRAR</button>
+          </span>
+        </div>
+      </div>
 
-  <a href="" class="toggleAsside">
-      <h2 class="">FILTROS</h2>
-  </a>
- 
+      <div class="clothingCards"> 
+        <img src="/assets/clothes/man/3.jpg" alt="">
+        <div class="clothingCards_div">
+          <p>REM MC HILLS</p>
+          <p>$15.400,00</p>
+          <p>3 cuotas sin interés de $5133,33</p>
+          <span>
+            <button class="clothingCards__button">AGREGAR AL CARRITO</button>  
+            <button class="clothingCards__button">COMPRAR</button>
+          </span>
+        </div>
+      </div>
 
- 
+      <div class="clothingCards"> 
+        <img src="/assets/clothes/man/4.jpg" alt="">
+        <div class="clothingCards_div">
+          <p>REM MC HILLS</p>
+          <p>$15.400,00</p>
+          <p>3 cuotas sin interés de $5133,33</p>
+          <span>
+            <button class="clothingCards__button">AGREGAR AL CARRITO</button>  
+            <button class="clothingCards__button">COMPRAR</button>
+          </span>
+        </div>
+      </div>
 
-<div class="dropdownMenu"></div>
-</aside>
-  </body>
+      <div class="clothingCards"> 
+        <img src="/assets/clothes/man/5.jpg" alt="">
+        <div class="clothingCards_div">
+          <p>REM MC HILLS</p>
+          <p>$15.400,00</p>
+          <p>3 cuotas sin interés de $5133,33</p>
+          <span>
+            <button class="clothingCards__button">AGREGAR AL CARRITO</button>  
+            <button class="clothingCards__button">COMPRAR</button>
+          </span>
+        </div>
+      </div>
+
+      <div class="clothingCards"> 
+        <img src="/assets/clothes/man/6.jpg" alt="">
+        <div class="clothingCards_div">
+          <p>BUZO CALLING HARRY</p>
+          <p> 
+            $31.500,00</p>
+          <p>3 cuotas sin interés de $10500,00</p>
+          <span>
+            <button class="clothingCards__button">AGREGAR AL CARRITO</button>  
+            <button class="clothingCards__button">COMPRAR</button>
+          </span>
+        </div>
+      </div>
+
+      <div class="clothingCards"> 
+        <img src="/assets/clothes/man/7.jpg" alt="">
+        <div class="clothingCards_div">
+          <p>BUZO CALLING HARRY</p>
+          <p> 
+            $31.500,00</p>
+          <p>3 cuotas sin interés de $10500,00</p>
+          <span>
+            <button class="clothingCards__button">AGREGAR AL CARRITO</button>  
+            <button class="clothingCards__button">COMPRAR</button>
+          </span>
+        </div>
+      </div>
+<a href="#">
+      <div class="clothingCards"> 
+        <img src="/assets/clothes/man/8.jpg" alt="">
+        <div class="clothingCards_div">
+          <p>BUZO ERROR</p>
+          <p> 
+            $33.900,00</p>
+          <p>3 cuotas sin interés de $11300,00</p>
+          <span>
+            <button class="clothingCards__button">AGREGAR AL CARRITO</button>  
+            <button class="clothingCards__button">COMPRAR</button>
+          </span>
+        </div>
+      </div>
+</a>
+
+<a href="#">
+  <div class="clothingCards"> 
+    <img src="/assets/clothes/man/9.jpg" alt="">
+    <div class="clothingCards_div">
+      <p>BUZO META</p>
+      <p> 
+        $33.900,00</p>
+      <p>3 cuotas sin interés de $11300,00</p>
+      <span>
+        <button class="clothingCards__button">AGREGAR AL CARRITO</button>  
+        <button class="clothingCards__button">COMPRAR</button>
+      </span>
+    </div>
+  </div>
+</a>
+
+
+    </section>
+
+  </main>
+
+
+</body>
+
 </html>

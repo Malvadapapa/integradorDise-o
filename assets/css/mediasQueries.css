@@ -100,12 +100,7 @@
       }
 }
 @media (max-width: 600px){
-    .headerSection {
-        height: 60px;
-      }
-    .headerSection img{
-        height: 70px;
-      }
+ 
     .headerSection{
         justify-content: space-between;
         padding: 0 10px;
