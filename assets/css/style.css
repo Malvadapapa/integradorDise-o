@@ -4,6 +4,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  /*   border: 1px solid red; */
 }
 body,
 html {
@@ -11,13 +12,14 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
   min-width: 360px;
-/*   background-image: url(/assets/background/lines.svg); */
+  /*   background-image: url(/assets/background/lines.svg); */
 }
 :root {
   --fontSizeMedium: clamp(0.75rem, 0.6346rem + 0.5128vw, 1.25rem);
   --purpleColor: #271d3b;
   --blackColor: black;
   --whiteColor: aliceblue;
+  --transitions: all 0.3s cubic-bezier(0.85, 0, 0.15, 1);
 }
 
 /*SECCION DE COLOR NEGRO DE DESCUENTOS ARRIBA DEL HEADER*/
@@ -27,6 +29,8 @@ html {
   color: var(--whiteColor);
   height: 30px;
   overflow: hidden;
+  position: relative;
+  z-index: 10;
 }
 .discountContainer {
   position: relative;
@@ -76,24 +80,20 @@ html {
 
 /*COMIENZO DEL HEADER*/
 .headerSection {
-  background-color:var(--blackColor);
+  background-color: var(--blackColor);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 80px;
+ 
   position: sticky;
   top: 0px;
   z-index: 15;
   height: 60px;
 }
 
- 
-
 .headerSection img {
   height: 70px;
- 
 }
- 
 
 .navContainer ul {
   display: flex;
@@ -237,9 +237,13 @@ html {
 #burgerMenu {
   display: none;
 }
-
+ 
 .headerSection label {
   display: none;
+  z-index: 15;
+  height: 50px;
+  width: 50px;
+  transform: translateX(-10px);
 }
 .burger--loggin-register {
   display: none;
@@ -249,8 +253,7 @@ html {
 /*COMEIZO DEL HERO SECTION*/
 .heroSliderSection {
   width: 100%;
-  overflow-x:hidden ;
- 
+  overflow-x: hidden;
 }
 .imgContainer {
   display: flex;
@@ -299,17 +302,15 @@ html {
   padding: 35px 0;
   display: flex;
   justify-content: space-around;
-
 }
-.womanManContainer a{
+.womanManContainer a {
   width: 50%;
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-
 }
- .womanClothing {
+.womanClothing {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -334,4 +335,247 @@ html {
 .womanClothing:hover {
   filter: grayscale(0);
   transition: all 0.5s;
+}
+
+.miCarrito {
+  display: flex;
+  z-index: 15;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  height: 90vh;
+ 
+}
+.CartBtn {
+  width: 40px;
+  height: 150px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border: none;
+  background-color: rgb(255, 208, 0);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 14;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+  position: sticky;
+}
+
+.IconContainer {
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: 0.5s;
+}
+
+.icon {
+  border-radius: 1px;
+}
+
+.text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.1px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(17, 17, 17);
+  z-index: 1;
+  transition-duration: 0.5s;
+  font-size: 1em;
+  font-weight: 600;
+}
+.CartBtn:hover {
+  height: 170px;
+}
+.CartBtn:hover .IconContainer {
+  transform: translateX(56px);
+  border-radius: 40px;
+  transition-duration: 0.5s;
+}
+
+.CartBtn:active {
+  transform: scale(0.95);
+  transition-duration: 0.5s;
+}
+
+.cartContainer {
+  height: 100%;
+  width: 0;
+  background-color: var(--whiteColor);
+  position: sticky;
+  z-index: 13;
+border-bottom-left-radius: 10px;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-between;
+  transition: all 0.5s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.cartContainer::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+.cartContainer::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+
+.cartContainer::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0); /* color of the scroll thumb */
+  border-radius: 5px; /* roundness of the scroll thumb */
+}
+
+#cartInput {
+  display: none;
+}
+.cartFocus {
+  transition: all 0.3s ease-in-out;
+}
+#cartInput:checked ~ .cartFocus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(59, 59, 59, 0.322);
+  backdrop-filter: blur(2px);
+  z-index: 13;
+  transition: all 0.3s cubic-bezier(0.85, 0, 0.15, 1);
+}
+#cartInput:checked ~ .cartContainer {
+  width: 300px;
+  overflow-y: scroll;
+  padding: 5px 5px;
+}
+.cartCards__Container {
+  display: flex;
+  gap: 20px;
+  height: 400px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cartCard {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  width: 90%;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 7px 7px 14px #bebebe, -7px -7px 14px #ffffff;
+}
+.trashIcon {
+  font-size: 20px;
+  z-index: 25;
+  color: red;
+  padding: 15px0;
+}
+.trashIcon:hover {
+  font-weight: bolder;
+  transform: scale(1.2);
+}
+.cartCard img {
+  height: 100%;
+}
+.cartCard--text {
+  font-size: 14px;
+  padding-right: 20px;
+}
+.item-handler {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+.item-handler span:hover:not(:nth-child(2)) {
+  font-weight: bolder;
+  transform: scale(1.2);
+}
+.cartTotal {
+  width: 100%;
+  position: relative;
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.cartTotal span {
+  display: flex;
+  justify-content: space-between;
+}
+.cartTotal button {
+  width: 100%;
+}
+
+.whatsappIcon {
+  background-color: green;
+  height: 40px;
+  width: 50px;
+  display: flex;
+  justify-self: center;
+  position: fixed;
+  right: 0;
+  bottom: 15px;
+  z-index: 12;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.whatsappIcon a {
+  width: 100%;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+.whatsappIcon a img {
+  height: 80%;
+  margin: 0 auto;
+}
+
+.footerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--whiteColor);
+  background-color: var(--blackColor);
+  padding: 15px;
+  height: 70px;
+ position: relative;
+  z-index: 10;
+  width: 100%;
+}
+.footerSocialMedia {
+  margin-right: 40px;
+}
+.footerSocialMedia {
+  display: flex;
+  gap: 10px;
+}
+.footerSocialMedia img {
+  filter: grayscale(1);
+  cursor: pointer;
+  height: 100%;
+}
+.footerSocialMedia img:hover {
+  filter: grayscale(0);
 }

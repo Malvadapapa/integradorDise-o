@@ -1,0 +1,19 @@
+@media (max-width: 930px){
+    .backgroundSection video {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: auto;
+      }
+/*       .logginSection {
+ 
+        height: 900px;
+ 
+      } */
+
+      .logginSection {
+ 
+        background-color: transparent;
+      }
+      
+}
