@@ -1,7 +1,4 @@
-body,
-html {
  
-}
 .backgroundSection {
   display: flex;
   justify-content: center;
@@ -15,7 +12,7 @@ html {
 .backgroundSection video {
   position: absolute;
   top: 0;
-  width: 100%;
+
 }
 .logginSection {
   position: absolute;
