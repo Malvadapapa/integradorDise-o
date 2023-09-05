@@ -29,6 +29,7 @@
 
   #exitBurger {
     height: 50px;
+    transform: translateX(-15px);
   }
   .navContainer label {
     padding: 30px;

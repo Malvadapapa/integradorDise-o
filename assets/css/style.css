@@ -19,6 +19,7 @@ html {
   --purpleColor: #271d3b;
   --blackColor: black;
   --whiteColor: aliceblue;
+  --mostaza: rgb(255, 208, 0);
   --transitions: all 0.3s cubic-bezier(0.85, 0, 0.15, 1);
 }
 
@@ -335,7 +336,7 @@ html {
   box-shadow: 25px 25px 50px #bcbcbc, -25px -25px 50px #ffffff;
 }
 .clothingCards:hover {
-  border: 1px solid black;
+  border: 1px solid var(--purpleColor);
   transition: var(--transitions);
   transform: scale(1.03);
   box-shadow: none;
@@ -358,8 +359,14 @@ html {
   font-size: 1.3em;
 }
 .clothingCards_div p:nth-child(3) {
-  color: red;
   font-weight: bold;
+}
+
+.clothingCards:hover .clothingCards_div{
+  border-top: 3px solid var(--purpleColor);
+}
+.clothingCards:hover .clothingCards_div p:nth-child(3){
+  color: red;
 }
 
 .clothingCards_div span {
@@ -407,7 +414,7 @@ html {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
-
+background-color: var(--blackColor);
   grid-template-areas:
     "ropaMujer Skate ropaHombre"
     "zapas zapas zapas";
@@ -499,7 +506,7 @@ transition: var(--transitions);
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
   border: none;
-  background-color: rgb(255, 208, 0);
+  background-color: var(--mostaza);
   display: flex;
   align-items: flex-start;
   justify-content: center;
