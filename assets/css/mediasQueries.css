@@ -1,8 +1,39 @@
-/* @media (min-width: 1730px) {
-  .imgContainer img {
-    height: clamp(42.5rem, 4.7214rem + 34.9398vw, 70rem);
+@media (min-width: 1730px) {
+  .imgSlider{
+    width: 1000px;
+    height: 1000px;
   }
-} */
+  .textSliders h3{
+    font-size: 5em;
+  }
+  
+  .textSliders h4{
+    font-size: 2em;
+  }
+  .textSliders p{
+    font-weight: bolder;
+    font-size: 4em;
+  }
+  .seeMoreBTN{
+    width: 400px;
+    height: 70px;
+  }
+  
+  .seeMoreBTN:nth-child(2){
+    width: 700px;
+  }
+  
+ 
+  .seeMoreBTN .clone > *,.seeMoreBTN .seeMoreBTN_text > * {
+    opacity: 1;
+    font-size: 2.8rem;
+    transition: 0.2s;
+  
+  }
+  .seeMoreBTN svg {
+    width: 50px;
+  }
+}
 
 @media (max-width: 1120px) {
   .headerSection {

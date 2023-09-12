@@ -298,6 +298,396 @@ html {
   }
 }
 /*FIN DEL HERO SECTION*/
+
+.indexZapaHero {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.indexZapaHeroCover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--purpleColor);
+  color: var(--whiteColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  flex-direction: column;
+}
+.indexZapaHeroCover span {
+  position: absolute;
+  bottom: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 250px;
+
+  animation: appear 0.7s ease-in infinite alternate;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.indexZapaHeroCover img {
+  height: 50px;
+}
+.indexZapaHeroCover img:nth-child(1) {
+  transform: rotate(-40deg);
+}
+.indexZapaHeroCover img:nth-child(2) {
+  transform: translateY(-40px);
+}
+.indexZapaHeroCover img:nth-child(3) {
+  transform: rotate(20deg);
+}
+.sliderZapaContainerUL {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sliderZapaContainerUL li {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  border-bottom-left-radius: 100%;
+  transition: all 2s;
+  overflow: hidden;
+  height: 100%;
+}
+
+#sliderZapa1 {
+  background-color: rgb(233, 233, 187);
+}
+#sliderZapa2 {
+  background-color: yellow;
+}
+#sliderZapa3 {
+  background-color: yellowgreen;
+}
+
+.sliders {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.imgSlider {
+  transform: rotate(15deg);
+  border-radius: 50%;
+  background-color: #271d3b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 600px;
+}
+.imgSlider img {
+  width: 100%;
+  animation-name: floating;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: alternate;
+}
+
+@keyframes floating {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-50px);
+  }
+
+  100% {
+    transform: translatey(0px);
+  }
+}
+.textSliders {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 80%;
+  width: 50%;
+  align-self: start;
+  margin: auto 0;
+}
+.textSliders h3 {
+  font-size: 3em;
+}
+
+.textSliders h4 {
+  font-size: 1.2em;
+}
+.textSliders p {
+  font-weight: bolder;
+  font-size: 3em;
+}
+
+.colorContainer {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.colorContainer_color {
+  height: 90px;
+  width: 90px;
+  border-radius: 15px;
+}
+.colorContainer_color:nth-child(1) {
+  background-color: rgb(255, 136, 0);
+}
+.colorContainer_color:nth-child(1):hover {
+  border: 5px solid rgb(179, 95, 0);
+}
+.colorContainer_color:nth-child(2) {
+  background-color: rgb(255, 255, 255);
+}
+.colorContainer_color:nth-child(2):hover {
+  border: 5px solid rgb(119, 119, 119);
+}
+.colorContainer_color:nth-child(3) {
+  background-color: rgb(0, 0, 0);
+}
+
+.colorContainer_color:nth-child(3):hover {
+  border: 5px solid rgb(65, 65, 65);
+}
+
+.textSliders span {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+  width: 80%;
+  margin: 0 auto;
+  border: transparent;
+}
+
+.seeMoreBTN {
+  cursor: pointer;
+  font-size: 1em;
+  width: 150px;
+  height: 56px;
+  overflow: hidden;
+  border: none;
+  background: none;
+  position: relative;
+  color: var(--blackColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seeMoreBTN:nth-child(2) {
+  width: 240px;
+}
+
+.seeMoreBTN > div,
+.seeMoreBTN > svg {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  display: flex;
+  gap: 5px;
+}
+
+.seeMoreBTN:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  background: currentColor;
+  transition: transform 0.25s ease-out;
+}
+
+.seeMoreBTN:hover:before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.seeMoreBTN .clone > *,
+.seeMoreBTN .seeMoreBTN_text > * {
+  opacity: 1;
+  font-size: 1.3rem;
+  transition: 0.2s;
+}
+
+.seeMoreBTN .clone > * {
+  transform: translateY(60px);
+}
+
+.seeMoreBTN:hover .clone > * {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+.seeMoreBTN:hover .seeMoreBTN_text > * {
+  opacity: 1;
+  transform: translateY(-60px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+.seeMoreBTN:hover .clone > :nth-child(1) {
+  transition-delay: 0.15s;
+}
+
+.seeMoreBTN:hover .clone > :nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.seeMoreBTN:hover .clone > :nth-child(3) {
+  transition-delay: 0.25s;
+}
+
+.seeMoreBTN:hover .clone > :nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.seeMoreBTN svg {
+  width: 20px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-50deg);
+  transition: 0.2s ease-out;
+}
+
+.seeMoreBTN:hover svg {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.indexZapaHeroMenu {
+  display: flex;
+  gap: 35px;
+  position: absolute;
+  bottom: 15px;
+  margin: 0 auto;
+}
+.indexZapaHeroMenu li {
+  width: 70px;
+  border-radius: 10px;
+  z-index: 10;
+  overflow: hidden;
+}
+.indexZapaHeroMenu li:hover {
+  border: 4px solid rgb(160, 160, 160);
+}
+.indexZapaHeroMenu li img {
+  height: 100%;
+  width: 100%;
+}
+.sliderZapaContainerUL li:target {
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 0;
+  transition: all 2s;
+}
+
+/* TARJETAS CON ENLACES A LAS SECCIONES DE ROPA*/
+.clothingIndexSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  background-color: var(--blackColor);
+  grid-template-areas:
+    "ropaMujer Skate ropaHombre"
+    "zapas zapas zapas";
+}
+
+.ropaMujer img,
+.Skate img,
+.ropaHombre img,
+.zapas img {
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+.zapas img:nth-child(2) {
+  display: none;
+}
+.ropaMujer,
+.Skate,
+.ropaHombre,
+.zapas {
+  filter: grayscale(10);
+  position: relative;
+}
+.ropaMujer div,
+.Skate div,
+.ropaHombre div,
+.zapas div {
+  font-family: sans-serif;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.ropaMujer div h3,
+.Skate div h3,
+.ropaHombre div h3,
+.zapas div h3 {
+  color: var(--whiteColor);
+  background-color: black;
+  width: 100%;
+  text-align: center;
+}
+
+.ropaMujer:hover,
+.Skate:hover,
+.ropaHombre:hover,
+.zapas:hover {
+  filter: grayscale(0);
+  transition: var(--transitions);
+}
+
+.ropaMujer {
+  grid-area: ropaMujer;
+}
+
+.Skate {
+  grid-area: Skate;
+}
+
+.ropaHombre {
+  grid-area: ropaHombre;
+}
+
+.zapas {
+  grid-area: zapas;
+}
+
+/* TARJETAS CON ENLACES A LAS SECCIONES DE ROPA*/
+
+/*CARDS CON ROPA DE HOMBRE Y MUJER QUE ESTAN EN EL INDEX, TAMBIEN ES EL ESTILO DE LAS DISTINTAS SECCIONES DE LA PAGINA DONDE HAY CARDS DE ROPA */
 .indexCards {
   display: flex;
   flex-direction: column;
@@ -362,10 +752,10 @@ html {
   font-weight: bold;
 }
 
-.clothingCards:hover .clothingCards_div{
+.clothingCards:hover .clothingCards_div {
   border-top: 3px solid var(--purpleColor);
 }
-.clothingCards:hover .clothingCards_div p:nth-child(3){
+.clothingCards:hover .clothingCards_div p:nth-child(3) {
   color: red;
 }
 
@@ -398,6 +788,7 @@ html {
 .clothingCards__button:active {
   transform: scale(0.9);
 }
+
 /*BANNER DE VANS*/
 .banner__vansIndex {
   width: 100%;
@@ -408,88 +799,7 @@ html {
 .banner__vansIndex img {
   width: 100%;
 }
-/* TARJETAS CON ENLACES A LAS SECCIONES DE ROPA*/
-.clothingIndexSection {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-background-color: var(--blackColor);
-  grid-template-areas:
-    "ropaMujer Skate ropaHombre"
-    "zapas zapas zapas";
-}
-
-.ropaMujer img,
-.Skate img,
-.ropaHombre img,
-.zapas img{
-  width: 100%;
-height: 100%;
-  z-index: 5;
-
-}
-.zapas img:nth-child(2){
- display: none;
-}
-.ropaMujer,
-.Skate,
-.ropaHombre,
-.zapas  {
-    filter: grayscale(10);
-  position: relative;
-}
-.ropaMujer div,
-.Skate div,
-.ropaHombre div,
-.zapas div {
-  font-family: sans-serif;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  font-size: 30px;
-  font-weight: bolder;
- 
-}
-.ropaMujer div h3,
-.Skate div h3,
-.ropaHombre div h3,
-.zapas div h3{
-  color: var(--whiteColor);
-  background-color: black;
-  width: 100%;
-  text-align: center;
-} 
-
-.ropaMujer:hover,
-.Skate:hover,
-.ropaHombre:hover,
-.zapas:hover {
-filter: grayscale(0);
-transition: var(--transitions);
-}
-
-.ropaMujer {
-  grid-area: ropaMujer;
-}
-
-.Skate {
-  grid-area: Skate;
-}
-
-.ropaHombre {
-  grid-area: ropaHombre;
-}
-
-.zapas {
-  grid-area: zapas;
-}
-
-/* TARJETAS CON ENLACES A LAS SECCIONES DE ROPA*/
+/*FIN BANNER DE VANS*/
 
 .miCarrito {
   display: flex;
