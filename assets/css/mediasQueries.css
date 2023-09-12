@@ -127,10 +127,31 @@
     display: none !important;
   }
 
-  .womanManContainer {
-    flex-wrap: wrap;
+
+  .indexZapaHero {
+    width: 100%;
+    height: 95vh;
+    min-height: 900px;
   }
-  .womanClothing {
+  .indexZapaHeroCover h2{
+    text-align: center;
+  }
+  .sliders {
+    flex-direction: column;
+  
+  }
+
+  .textSliders {
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+ 
+  .textSliders span{
     width: 100%;
   }
 
@@ -157,6 +178,21 @@
     display: block;
     height: 100%;
    }
+
+   .sliderDiscountBottom{
+   
+    height: 20vh;
+ 
+  }
+  .discountContainerBottom{
+
+    font-size: .9em;
+ 
+  }
+  .discountContainerBottom img{
+    height: 30%;
+  }
+
 }
 
 @media (max-width: 700px) {
@@ -171,6 +207,21 @@
       "ropaHombre"
       "zapas";
   }
+  
+  .sliderDiscountBottom{
+  gap: 15px;
+    height: 15vh;
+ 
+  }
+  .discountContainerBottom{
+
+    font-size: .7em;
+ 
+  }
+  .discountContainerBottom img{
+    height: 30%;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -200,5 +251,64 @@
   }
   .footerSocialMedia {
     height: 20px;
+  }
+
+
+  .indexZapaHero {
+    width: 100%;
+    height: 95vh;
+    min-height: 700px;
+  }
+  .sliders {
+    flex-direction: column;
+    padding-top: 15px;
+  }
+  .imgSlider{
+    width: 300px;
+    height: 300px;
+  }
+  .textSliders {
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+
+
+  .colorContainer_color {
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+  }
+  .textSliders h3{
+    font-size: 2em;
+  }
+  
+  .textSliders h4{
+    font-size: .7em;
+  }
+  .textSliders p{
+    font-weight: bolder;
+    font-size: 2em;
+  }
+  .seeMoreBTN{
+    width: 160px;
+    height: 50px;
+  }
+  
+  .seeMoreBTN:nth-child(2){
+    width: 270px;
+  }
+  
+ 
+  .seeMoreBTN .clone > *,.seeMoreBTN .seeMoreBTN_text > * {
+     font-size: 1rem;
+   }
+  .seeMoreBTN svg {
+    width: 15px;
   }
 }

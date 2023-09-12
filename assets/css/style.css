@@ -306,6 +306,7 @@ html {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 .indexZapaHeroCover {
   position: absolute;
@@ -328,7 +329,6 @@ html {
   display: flex;
   justify-content: center;
   gap: 250px;
-
   animation: appear 0.7s ease-in infinite alternate;
 }
 @keyframes appear {
@@ -694,6 +694,7 @@ html {
   justify-content: center;
   width: 100%;
   align-items: center;
+
 }
 .indexCards h2 {
   font-family: sans-serif;
@@ -712,6 +713,7 @@ html {
   overflow: hidden;
   gap: 20px;
   width: 100%;
+  max-width: 1800px;
 }
 
 .clothingCards {
@@ -792,6 +794,7 @@ html {
 /*BANNER DE VANS*/
 .banner__vansIndex {
   width: 100%;
+  background-color: black;
 }
 .banner__vansIndex {
   width: 100%;
@@ -1014,6 +1017,32 @@ html {
   height: 80%;
   margin: 0 auto;
 }
+
+.sliderDiscountBottom{
+  width: 100%;
+  height: 30vh;
+  background-color: #e0e0e0;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+.discountContainerBottom{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1em;
+  font-weight: bolder;
+  gap: 10px;
+  text-align: center;
+}
+.discountContainerBottom img{
+  height: 50%;
+}
+
+
+
 
 .footerSection {
   display: flex;
